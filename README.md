@@ -17,7 +17,7 @@ A set of handmade scripts that I use daily. From a general Unix use to a more sp
 Some scripts may not work, since `install.sh` **doesn't** install the necessary dependencies, they are listed in `dependencies.txt`. This behavior is intentional to avoid interfering and breaking dependencies on other programs (for example not installing python packages in the virtual env).
 
 ## Contributing
-Feal free to report a bug or request a branch merge, I appreciate any contribution.
+Feel free to report a bug or request a branch merge, I appreciate any contribution.
 
 ## Author
 
