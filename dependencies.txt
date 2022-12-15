@@ -1,0 +1,2 @@
+Kutu's scripts dependencies:
+	- Python
