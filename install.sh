@@ -26,6 +26,12 @@ for namespace_directory in */; do
         fi
 
         script_filename=$(basename "$script")
+
+        # Skip the file if it's a MARKDOWN file
+        if [ "${script_filename##*.}" = "md" ]; then
+            continue
+        fi
+
         # Remove file extension
         script_filename="${script_filename%.*}"
         
