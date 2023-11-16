@@ -1,0 +1,47 @@
+#!/usr/bin/env sh
+
+info_printf() {
+    printf "%s\n" "$(tput bold)[ $(tput setaf 2)INFO$(tput sgr0) ]$(tput sgr0) $1"
+}
+
+error_printf() {
+    printf "%s\n" "$(tput bold)[ $(tput setaf 1)ERROR$(tput sgr0) ]$(tput sgr0) $1"
+}
+
+# Enter where this script is located
+cd "$(dirname "$0")" || exit
+
+if [ "$(id -u)" -ne 0 ]; then
+    error_printf "Please run this script as superuser"
+    exit 1
+fi
+
+info_printf "Emptying /usr/local/bin/ files"
+rm /usr/local/bin/*
+
+for namespace_directory in */; do
+    for script in "$namespace_directory"*; do
+        if [ ! -f "$script" ]; then
+            continue
+        fi
+
+        script_filename=$(basename "$script")
+        # Remove file extension
+        script_filename="${script_filename%.*}"
+        
+        if [ "$namespace_directory" = "no-namespace/" ]; then
+            command_name=$script_filename
+        else
+            namespace=$(printf "%s" "$namespace_directory" | sed "s/\//-/g")
+            command_name=$namespace$script_filename
+        fi
+
+        command_path=/usr/local/bin/"$command_name"
+
+        info_printf "Installing $command_name script"
+        cp "$script" "$command_path"
+        chmod 755 "$command_path"
+    done
+done
+
+info_printf "Done!"
