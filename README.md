@@ -19,7 +19,7 @@ The documentation for the commands is divided by its namespace:
 ## How it works
 All the scripts are located inside multiple directories, each one is a namespace. The only purpose of the namespaces is to minimize name collision with already installed commands.
 
-When `install.sh` is run each command is prepended with its namespace and its extension is remove. 
+When `install.sh` is run each command is prepended with its namespace and its extension is remove.
 E.g.`vleps/sync.sh` -> `/usr/local/bin/vleps-sync`.
 
 Namespaces can be nested, thus the path `example/foo/bar/command.sh` becomes`example-foo-bar-command`.
