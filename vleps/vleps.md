@@ -33,4 +33,4 @@ Each extra package subdirectory can have extra templates in the `srcpkgs` direct
 3. And finally it installs the packages listed in the plain text configuration file located in `$XDG_CONFIG_HOME/vleps/packages.txt`.
 
 > [!CAUTION]
-> As you can read, this script suit is destinated to improve the quality of life of managing custom XBPS packages. Because of this, the `packages.txt` file is **NOT** intended as a installed packages tracker, a deterministic package manager (like [Nix](https://nixos.org/) or [Guix](https://guix.gnu.org/)) is that's the goal.
+> As you can read, this script suit is destinated to improve the quality of life of managing custom XBPS packages. Because of this, the `packages.txt` file is **NOT** intended as a installed packages tracker, a deterministic package manager (like [Nix](https://nixos.org/) or [Guix](https://guix.gnu.org/)) is recommended this goal.
