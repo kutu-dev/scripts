@@ -1,32 +1,36 @@
-# Kutu's Scrips
-> A collection of miscellaneous script for Unix-like systems.
+<div align="center">
+<h1>Kutu's Scripts</h1>
+
+A collection of miscellaneous script for Unix-like systems.
+</div>
 
 ## Installation
-Run the `ìnstall.sh` script to install all the scripts in the `/usr/local/bin/` path.
+The only dependency at the moment is the `just` command (installation info at [its manual](https://just.systems/man/en/chapter_4.html)).
+
+Some namespaces may have special needs and dependencies, check if they have an extra `README.md` file.
 
 ```sh
 # git clone https://github.com/kutu-dev/scripts.git
 # cd scripts
-# ./install.sh
+# just install
 ```
 
-_Tip:_ Remember to add `/usr/local/bin/` to your shell `PATH`.
+Scripts are installed to `/usr/local/bin`, remember to add it to your `PATH`.
 
 ## Usage
-The documentation for the commands is divided by its namespace:
-- [`vleps`](vleps/vleps.md)
-- [`macos`](macos/macos.md)
+The documentation for the commands is split by its namespace:
+- [`macos`](macos/README.md)
+
+If a namespace is missing documentation is because its scripts are self explanatory.
 
 ## How it works
 All the scripts are located inside multiple directories, each one is a namespace. The only purpose of the namespaces is to minimize name collision with already installed commands.
 
-When `install.sh` is run each command is prepended with its namespace and its extension is remove.
-E.g.`vleps/sync.sh` -> `/usr/local/bin/vleps-sync`.
+When `install.sh` is run each command is prepended with its namespace and its extension is removed.
 
-Namespaces can be nested, thus the path `example/foo/bar/command.sh` becomes`example-foo-bar-command`.
+E.g.`macos/random-change-wallpaper.sh` -> `/usr/local/bin/macos-random-change-wallpaper`.
 
+Namespaces can be nested, thus the path `example/foo/bar/command.sh` becomes `example-foo-bar-command`.
 
-## Author
-Created with :heart: by [Kutu](https://kutu-dev.github.io).
-> - GitHub - [kutu-dev](https://github.com/kutu-dev)
-> - Twitter - [@kutu_dev](https://twitter.com/kutu_dev)
+## Acknowledgements
+Created with :heart: by [Jorge "Kutu" Dobón Blanco](https://dobon.dev).
