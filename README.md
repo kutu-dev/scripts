@@ -10,9 +10,9 @@ The only dependency at the moment is the `just` command (installation info at [i
 Some namespaces may have special needs and dependencies, check if they have an extra `README.md` file.
 
 ```sh
-# git clone https://github.com/kutu-dev/scripts.git
-# cd scripts
-# just install
+git clone https://github.com/kutu-dev/scripts.git
+cd scripts
+just install
 ```
 
 Scripts are installed to `/usr/local/bin`, remember to add it to your `PATH`.
