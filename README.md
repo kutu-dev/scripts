@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Kutu's Scripts</h1>
 
-A collection of miscellaneous script for Unix-like systems.
+A collection of miscellaneous scripts for Unix-like systems.
 </div>
 
 ## Installation
